@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head><title>Query Input</title></head>
+<body>
+	<h1><center><u>Enter Your Questions & Answer Below</u></center></h1>
+	
+	<script src = "storeQ&A.js"></script>
+	
+	Question#1:<input type="text" id="Q1"><br>
+	  Answer#1:<input type="text" id="A11"><br>
+	  Answer#2:<input type="text" id="A12"><br>
+	  Answer#3:<input type="text" id="A13"><br>
+	  Answer#4:<input type="text" id="A14"><br>
+	  
+	  <br>
+	  <br>
+	  <br>
+	
+	Question#2:<input type="text" id="Q2"><br>
+	  Answer#1:<input type="text" id="A21"><br>
+	  Answer#2:<input type="text" id="A22"><br>
+	  Answer#3:<input type="text" id="A23"><br>
+	  Answer#4:<input type="text" id="A24"><br>
+	
+	  <br>
+	  <br>
+	  <br>
+	  
+	Question#3:<input type="text" id="Q3"><br>
+	Answer#1:<input type="text" id="A31"><br>
+	  Answer#2:<input type="text" id="A32"><br>
+	  Answer#3:<input type="text" id="A33"><br>
+	  Answer#4:<input type="text" id="A34"><br>
+	  
+	  <br>
+	  <br>
+	  <br>
+	  
+	  Question#4:<input type="text" id="Q4"><br>
+	  Answer#1:<input type="text" id="A41"><br>
+	  Answer#2:<input type="text" id="A42"><br>
+	  Answer#3:<input type="text" id="A43"><br>
+	  Answer#4:<input type="text" id="A44"><br>
+	  
+	  <br>
+	  <br>
+	  <br>
+	  
+	  Question#5:<input type="text" id="Q5"><br>
+	  Answer#1:<input type="text" id="A51"><br>
+	  Answer#2:<input type="text" id="A52"><br>
+	  Answer#3:<input type="text" id="A53"><br>
+	  Answer#4:<input type="text" id="A54"><br>
+	  
+	  <br><br><br>
+	  
+	  <button onclick="checkButtonSubmit(), location.href='main.html'">Submit</button>
+	
+	 
+	<script>
+		var SurveyInput = new SurveyCustom();
+		
+		function checkButtonSubmit() {
+		
+			SurveyInput.arrQ[0] = document.getElementById("Q1").value;
+			SurveyInput.arrQ[1] = document.getElementById("Q2").value;
+			SurveyInput.arrQ[2] = document.getElementById("Q3").value;
+			SurveyInput.arrQ[3] = document.getElementById("Q4").value;
+			SurveyInput.arrQ[4] = document.getElementById("Q5").value;
+			
+			SurveyInput.arrA[0] = document.getElementById("A11").value;
+			SurveyInput.arrA[1] = document.getElementById("A12").value;
+			SurveyInput.arrA[2] = document.getElementById("A13").value;
+			SurveyInput.arrA[3] = document.getElementById("A14").value;
+			
+			SurveyInput.arrA[4] = document.getElementById("A21").value;
+			SurveyInput.arrA[5] = document.getElementById("A22").value;
+			SurveyInput.arrA[6] = document.getElementById("A23").value;
+			SurveyInput.arrA[7] = document.getElementById("A24").value;
+			
+			SurveyInput.arrA[8] = document.getElementById("A31").value;
+			SurveyInput.arrA[9] = document.getElementById("A32").value;
+			SurveyInput.arrA[10] = document.getElementById("A33").value;
+			SurveyInput.arrA[11] = document.getElementById("A34").value;
+			
+			SurveyInput.arrA[12] = document.getElementById("A41").value;
+			SurveyInput.arrA[13] = document.getElementById("A42").value;
+			SurveyInput.arrA[14] = document.getElementById("A43").value;
+			SurveyInput.arrA[15] = document.getElementById("A44").value;
+			
+			SurveyInput.arrA[16] = document.getElementById("A51").value;
+			SurveyInput.arrA[17] = document.getElementById("A52").value;
+			SurveyInput.arrA[18] = document.getElementById("A53").value;
+			SurveyInput.arrA[19] = document.getElementById("A54").value;
+
+			localStorage.setItem("arrAns", JSON.stringify(SurveyInput.arrA));
+			localStorage.setItem("arrQue", JSON.stringify(SurveyInput.arrQ));
+			
+			SurveyInput.save();
+
+			
+		}
+		//SurveyInput.load();
+		//{"arrQ":["a","f","k","p","u"],"arrA":["b","c","d","e","g","h","i","j","l","m","n","o","q","r","s","t","v","w","x","y"],"cart":{"arrQ":["","","","",""],"arrA":["","","","","","","","","","","","","","","","","","","",""],"cart":{"arrQ":["j","g","bj","j",""],"arrA":[["k","n","b","u"],["j","n","k","u"]],"cart":{"arrQ":[],"titleName":"Characteristics Survey","arrA":[[],[]]}}}}
+	
+	</script>
+	
+</body>
+</html>
+
+

@@ -1,0 +1,66 @@
+<!DOCTYP html>
+<html>
+<head>
+	<title>Survey Assignment</title>
+</head>
+<style>
+	body{
+		background-color: orange;
+	}
+</style>
+<body>
+	<script type ="text/javascript" src = "storeQ&A.js"></script>
+	<script type ="html" src = "inputQ&A.html"></script>
+
+	<script>
+		var Survey = new SurveyCustom();
+		Survey.load();
+		//Retrieve the information from local storage
+		var strAns=localStorage.getItem("arrAns");
+		//Parse the information back into an array
+		var arrAn = JSON.parse(strAns);
+		
+		//Retrieve the information from local storage
+		var strQ =localStorage.getItem("arrQue");
+		//Parse the information back into an array
+		var arrQu =JSON.parse(strQ);
+		
+		document.write("<h1><center>" + "Make it Yourself Survey" + "</center></h1>");
+	</script>
+
+	<form action="results.html" method="get">
+	 		<script>document.write("1. " + arrQu[0] + "?</br>");</script>
+            <input type="radio" name="Q1" value="A1"><script>document.write(arrAn[0]+"</br></br>");</script>
+            <input type="radio" name="Q1" value="A2"><script>document.write(arrAn[1]+"</br></br>");</script>
+            <input type="radio" name="Q1" value="A3"><script>document.write(arrAn[2]+"</br></br>");</script>
+            <input type="radio" name="Q1" value="A4"><script>document.write(arrAn[3]+"</br></br>");</script>
+            
+            <script>document.write("2. " + arrQu[1] + "?</br>");</script>
+            <input type="radio" name="Q2" value="A1"><script>document.write(arrAn[4]+"</br></br>");</script>
+            <input type="radio" name="Q2" value="A2"><script>document.write(arrAn[5]+"</br></br>");</script>
+            <input type="radio" name="Q2" value="A3"><script>document.write(arrAn[6]+"</br></br>");</script>
+            <input type="radio" name="Q2" value="A4"><script>document.write(arrAn[7]+"</br></br>");</script>
+          
+           <script>document.write("3. " + arrQu[2] + "?</br>");</script>
+            <input type="radio" name="Q3" value="A1"><script>document.write(arrAn[8]+"</br></br>");</script>
+            <input type="radio" name="Q3" value="A2"><script>document.write(arrAn[9]+"</br></br>");</script>
+            <input type="radio" name="Q3" value="A3"><script>document.write(arrAn[10]+"</br></br>");</script>
+            <input type="radio" name="Q3" value="A4"><script>document.write(arrAn[11]+"</br></br>");</script>
+        
+            <script>document.write("4. " + arrQu[3] + "?</br>");</script>
+            <input type="radio" name="Q4" value="A1"><script>document.write(arrAn[12]+"</br></br>");</script>
+            <input type="radio" name="Q4" value="A2"><script>document.write(arrAn[13]+"</br></br>");</script>
+            <input type="radio" name="Q4" value="A3"><script>document.write(arrAn[14]+"</br></br>");</script>
+            <input type="radio" name="Q4" value="A4"><script>document.write(arrAn[15]+"</br></br>");</script>
+         
+            <script>document.write("5. " + arrQu[4] + "?</br>");</script>
+            <input type="radio" name="Q5" value="A1"><script>document.write(arrAn[16]+"</br></br>");</script>
+            <input type="radio" name="Q5" value="A2"><script>document.write(arrAn[17]+"</br></br>");</script>
+            <input type="radio" name="Q5" value="A3"><script>document.write(arrAn[18]+"</br></br>");</script>
+            <input type="radio" name="Q5" value="A4"><script>document.write(arrAn[19]+"</br></br>");</script>
+            <input type="submit" name="Submit">
+           
+        </form>
+ 
+</body>
+</html> 
