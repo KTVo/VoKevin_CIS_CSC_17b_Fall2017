@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cart</title>
+    <script type="text/javascript" src="Question.js"></script>
+    <script type="text/javascript" src="cookieFunctions.js"></script>
+<head>
+<style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		}
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: black;
+		}
+</style>
+<body>
+	<h1><center><u>Cart</u></center></h1>
+	<script type ="text/javascript" src = "cart.js"></script>
+	<script type ="html" src = "storefront.html"></script>
+	<script>
+		var b = new Cart();
+		b.loadCart();
+		b.showCart();
+		
+		//Use JSON to turn into a string
+        var text=JSON.stringify(b);
+        
+        //Write the cookie and check it out
+        setCookie("object",text,1);
+        checkCookie("object");
+        
+	</script>
+	<br><br>
+	<button onclick = "checkButtonClear()">Clear Cart</button>
+	<form action="storefront.html">
+		<input type="submit" value="Return to Store" />
+	</form>
+	
+	
+	<form action="cartEdit.html">
+		<input type="submit" value="Edit Cart" />
+	</form>
+	<script>
+		function checkButtonClear(){
+			document.getElementById("checkButtonClear").onclick = b.clearCart();
+			document.getElementById("checkButtonClear").onclick = window.location.reload();
+		}
+		
+	</script>
+	
+	<button onclick="window.location.assign('cookieTransferObject.php')">Checkout Cart</button>
+	<p id = "checkButtonClear"></p>
+	<p id = "checkButtonReturn"></p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[1204/082143.213:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1204/082143.229:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1204/082143.229:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[1204/082143.230:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[1204/082143.244:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1204/082143.244:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[1204/082143.244:ERROR:process_reader_win.cc(242)] ReadMemory at 0x5d8e9fafb0 of 16 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1204/082143.245:ERROR:exception_snapshot_win.cc(180)] EXCEPTION_POINTERS read failed
+[1204/082143.245:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[1204/082143.245:ERROR:scoped_process_suspend.cc(39)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)
+[1204/160048.977:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1204/160048.993:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1204/160048.993:ERROR:process_reader_win.cc(123)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[1204/160048.993:ERROR:process_reader_win.cc(242)] ReadMemory at 0xd6cbffb200 of 16 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1204/160048.993:ERROR:exception_snapshot_win.cc(180)] EXCEPTION_POINTERS read failed
+[1204/160048.993:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[1204/160048.993:ERROR:scoped_process_suspend.cc(39)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)

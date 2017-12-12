@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+</head>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+</style>
+	<body>
+	<br><br>
+	<center><h1><u>Register</u></h1></center>
+	<br><br><br>
+
+	<form action="login.html" style="border:1px solid #ccc">
+		<div class="container">
+			<label><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" pattern="[A-Za-z0-9]{4,}">
+
+			<label><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required pattern="[A-Za-z0-9]{4,}">
+
+			<label><b>Repeat Password</b></label>
+			<input type="password" placeholder="Repeat Password" name="psw-repeat" required pattern="[A-Za-z0-9]{4,}">
+   
+			<button type="submit" class="signupbtn">Register</button>
+ 
+		</div>
+	</form>
+
+</body>
+</html>
+
+        

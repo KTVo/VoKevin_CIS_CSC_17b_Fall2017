@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie From PHP to JS</title>
+	<script type="text/javascript" src="cookieFunctions.js"></script>
+</head>
+<body>
+	<script>
+
+		var a = getCookie("object3");
+		var clean = decodeURIComponent(a);
+		var n = clean.replace(/\++/g,' ');
+		//document.write(n);
+
+	</script>
+
+</body>
+</html>
