@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body{
+		background-color: red
+	}
+</style>
+<body>
+
+<h1>Login</h1>
+<br/>
+<h2>*Caution: input for the USERNAME and Password must individually be at least 4 characters long AND must be NUMBERS or LETTERS only.</h2>
+<form action="storefront.html">
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" pattern="[A-Za-z0-9]{4,}">
+
+    <label><br/><br><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" pattern="[A-Za-z0-9]{4,}">
+        
+    <button type="submit">Login</button>
+  </div>
+
+</form>
+<p>New User? <a href="register.html">Register</a></p>
+</body>
+</html>

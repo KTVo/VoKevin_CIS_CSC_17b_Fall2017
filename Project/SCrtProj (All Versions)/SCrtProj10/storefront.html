@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head><title>Store Front</title></head>
+<style>
+	body{
+		height: 100%;
+    	margin: 0;
+		
+		background-image: url("red_background.jpg");
+		height: 100%; 
+		width: 100%;
+	
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+	}
+</style>
+<body>
+	<script src = "cart.js"></script>
+	<a href="cart.html"><p align = "right", style="font-size : 30px";">Cart     </p></a>
+	<a href="logout.php"><p align = "right", style="font-size : 30px";">Logout     </p></a>
+	<h1><center><u>Store Front</u></center></h1>
+	<div>
+		<h3>Burger ($4.99 each)</h3>
+		<img src="burger.png" alt="burger.png" width="300" height="200">
+		<br />
+		
+		<h3><u>Product Description:</u></h3>
+		
+		<ul>
+			<li>Calories:  980</li>
+			<li>Cholesterol: 165mg</li>
+			<li>Fat: 69g</li>
+			<li>Saturated Fat: 27mg</li>
+		</ul>
+		<button onclick = "checkButtonBurger()">Add Burger to Cart</button>
+		<button onclick = "checkButtonQuickView()">Quick View Cart</button>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+
+	<div>
+		<h3>Pouch of Fries ($2.99 each)<h3>
+		<img src="french_fries.png" alt="french_fries.png" width="250" height="300">
+
+		<br />
+		
+		<h3><u>Product Description:</u></h3>
+		
+		<ul>
+			<li>Calories:  300</li>
+			<li>Cholesterol: 0mg</li>
+			<li>Fat: 15g</li>
+			<li>Saturated Fat: 2.5mg</li>
+		</ul>
+		<button onclick = "checkButtonFries()">Add Fries to Cart</button>
+		<button onclick = "checkButtonQuickView()">Quick View Cart</button>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+
+	<div>
+		<h3>Can of Coke ($1.99 each)</h3>
+		<img src="can_of_coke.png" alt="can_of_coke.png" width="250" height="250">
+		<br />
+		
+		<h3><u>Product Description:</u></h3>
+		
+		<ul>
+			<li>Calories:  140</li>
+			<li>Cholesterol: 0mg</li>
+			<li>Fat: 0g</li>
+			<li>Saturated Fat: 0mg</li>
+			<li>Sugars: 39g</li>
+		</ul>
+		<button onclick = "checkButtonCoke()">Add Coke to Cart</button>
+		<button onclick = "checkButtonQuickView()">Quick View Cart</button>
+		<br/>
+		<br/>
+		<a href="cart.html"><p style="font-size : 48px";">Goto Cart</p></a>
+	</div>
+
+	<script> 
+		var b = new Cart();
+		function checkButtonBurger(){
+			document.getElementById("addToCart_Burger").onclick = b.add("Burger", 4.99, 1);
+		}
+
+		function checkButtonFries(){
+			document.getElementById("addToCart_Fries").onclick = b.add("Fries", 2.99, 1);
+		}
+
+		function checkButtonCoke(){
+			document.getElementById("addToCart_Coke").onclick = b.add("Coke", 1.99, 1);
+		}
+		
+		function checkButtonQuickView(){
+			document.getElementById("quickViewCart").onclick = b.quickView();
+		}
+		b.loadCart();
+
+	</script>
+	<p id = "addToCart_Burger"></p>
+	<p id = "addToCart_Fries"></p>
+	<p id = "addToCart_Coke"></p>
+	<p id = "quickViewCart"></p>
+</body>
+</html>
