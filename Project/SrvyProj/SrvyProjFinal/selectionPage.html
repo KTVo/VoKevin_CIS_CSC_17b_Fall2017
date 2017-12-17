@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Survey Options</title>
+
+</head>
+<body bgcolor= "orange">
+<h1><center>Would you like to:</center></h1>
+<br><br>
+
+<script>
+function checkBtnCreate(){
+	var askTitle = prompt("Please enter title name: ");
+	localStorage.setItem("title", askTitle);
+	
+	window.location.href='storeQA.php';
+}
+</script>
+
+<center>
+<button type="button" onclick="checkBtnCreate()">Create Survey</button> <button type="button" onclick="window.location.href='viewSurvey.php'">View Survey</button>
+</center>
+
+</body>
+</html>
