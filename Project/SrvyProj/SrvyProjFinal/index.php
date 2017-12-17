@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <label>
               Password<span class="req">: </span>
             </label>
-            <input type="password" required autocomplete="off" name="password"/>
+            <input type="password" required autocomplete="off" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 3 or more characters"/>
           </div>
 
           <br>

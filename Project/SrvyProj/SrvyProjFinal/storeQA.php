@@ -100,7 +100,7 @@
 
 			setCookie("length", length, 1);
                 
-			window.location.assign("viewSurvey.php");
+			window.location.assign("listSurvey.php");
 		}else
             document.getElementById("error").innerHTML = "Error: Not logged in";
 	}
