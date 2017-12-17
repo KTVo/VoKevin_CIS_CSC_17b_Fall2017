@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+	
+    background-image: url("table+background.png");
+
+    height: 100%; 
+	width: 100%;
+	
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+	.Center{
+		position:relative;
+		left: 43%;
+		margin-top:38%;
+	}
+	.btn-bot{
+		position: absolute;
+		bottom: 0%;
+
+	}
+
+</style>
+</head>
+
+<body>
+
+<form action="leaderboard.html" target="_blank">
+	<input type="submit" value="Show Leaderboard" />
+</form>
+
+<form action="rules.html" target="_blank">
+	<input type="submit" value="Show Rules" />
+</form>
+
+<div class='Center' align='bottom'>
+
+	<button onclick = "this.innerHTML = hitMove()">Hit</button>
+	<button onclick = "this.innerHTML = standMove()">Stand</button>
+	<button onclick = "this.innerHTML = doubleMove()">Double</button>
+	<button onclick = "this.innerHTML = split()">Split</button>
+	
+</div>
+	<script>
+		var inBet = prompt("Enter your bet: $");
+	</script>
+</body>
+</html>

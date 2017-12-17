@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackjack in JS</title>
+</head>
+<body>
+	<script type="text/javascript" src="Card.js"></script>
+	<script type="text/javascript" src="Deck.js"></script>
+	<script type="text/javascript" src="Shoe.js"></script>
+	<script type="text/javascript" src="Hand.js"></script>
+	<script type="text/javascript" src="Player.js"></script>
+	<script type="text/javascript" src="Dealer.js"></script>
+	<script>
+		//Create a shoe of cards
+		var s = new Shoe();
+
+		//shuffle and print deck
+		s.shuffleShoe();
+		document.write("PRINTING DECK <br>");
+		s.printShoe();
+
+		//declare players and house
+		var a = new Dealer();
+		var b = new Player();
+
+		//copy shoe to player b and a
+		b.constructor(s);
+		a.constructor(s);
+	
+		b.firstDeal();
+		document.write("<br> Your Hand: <br>");
+		b.prntHand();
+		document.write("Hand Total: "+b.getTotScore()+"<br>");
+
+		a.firstDeal();
+		document.write("<br> House Hand: <br>");
+		a.prntHand();
+		document.write("Dealer Total: "+a.getTotScore()+"<br>");
+
+		// if(b.winBJ()){
+		// 	document.write("You Won <br>");
+		// }
+		// else if(a.winBJ()){
+		// 	document.write("You Lost, The Dealer Beat You! <br>");
+		// }
+		// else{
+		// 	while(!b.isBust()){
+		// 		document.write("Would You Like to Hit or Stand?<br><br>");
+		// 		document.write("Enter an H for Hit or S for Stand <br>");
+		// 		var n=prompt("Hit or Stand?");
+		// 		document.write("You Typed: "+n+"<br>");
+
+		// 		if(n=="H"){
+		// 			b.hit();
+		// 			if(b.getTotScore() == 21){
+		// 				document.write("<br> You Won!! <br>");
+		// 				document.write("Your Score Was: "+b.getTotScore()+"<br>");
+		// 				break;
+		// 			}
+		// 		}
+		// 		else if(n=="S"){
+		// 			a.game(b);
+		// 			break;
+		// 		}
+		// 		document.write("Your Hand after hitting: ");
+		// 		b.prntHand();
+		// 		document.write("<br><br>");
+		// 		document.write("Hand Total after hitting: "+b.getTotScore()+"<br><br>");
+
+		// 		if(b.isBust()){
+		// 			document.write("You went over 21!");
+		// 		}
+		// 	}
+		// }
+
+		// document.write("<br> DECK AFTER DEALING: <br>");
+		// s.printShoe();
+	
+	</script>
+</body>
+</html>

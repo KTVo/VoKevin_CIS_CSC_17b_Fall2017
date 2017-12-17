@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+	
+    /*background-image: url("table+background.png");*/
+
+    height: 100%; 
+	width: 100%;
+	
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+  }
+  
+	.Center{
+		position:relative;
+		left: 43%;
+		margin-top:38%;
+	}
+	.btn-bot{
+		position: absolute;
+		bottom: 0%;
+	}
+
+
+
+</style>
+</head>
+
+<body>
+	<script type="text/javascript" src="Card.js"></script>
+	<script type="text/javascript" src="Deck.js"></script>
+	<script type="text/javascript" src="Shoe.js"></script>
+	<script type="text/javascript" src="Hand.js"></script>
+	<script type="text/javascript" src="Player.js"></script>
+	<script type="text/javascript" src="Dealer.js"></script>
+	<script type="text/javascript" src="Deal.js"></script>
+	<script type="text/javascript" src="hitMove.js"></script>
+	<script type="text/javascript" src="standMove.js"></script>
+
+<form action="leaderboard.html" target="_blank">
+	<input type="submit" value="Show Leaderboard" />
+</form>
+
+<form action="rules.html" target="_blank">
+	<input type="submit" value="Show Rules" />
+</form>
+
+<div class ="dealer">
+	<p id="00"></p>
+	<p id="dealerscore"></p>
+		<div class="imgdealer" >
+		<img id = "dimg0" src = "" width = "50" height="80" style="visibility:hidden">
+		<img id = "dimg1" src = "" width = "50" height="80" style="visibility:hidden">
+		<img id = "dimg2" src = "" width = "50" height="80" style="visibility:hidden">
+		<img id = "dimg3" src = "" width = "50" height="80" style="visibility:hidden">
+	</div>
+</div>
+
+<div class ="player1">
+	<p id="01">"before click deal"</p>
+	<p id="01score"></p>
+	<p id="result"></p>
+
+	<div class="img00" >
+		<img id = "img0" src = "" width = "50" height="80" style="visibility:hidden">
+		<img id = "img1" src = "" width = "50" height="80" style="visibility:hidden">
+		<img id = "img2" src = "" width = "50" height="80" style="visibility:hidden">
+		<img id = "img3" src = "" width = "50" height="80" style="visibility:hidden">
+	</div>
+
+</div>
+
+<div class='Center' align='bottom'>
+	<button onclick = "Deal()">Deal</button>
+	<button onclick = "hitMove()">Hit</button>
+	<button onclick = "standMove()">Stand</button>
+	<button onclick = "doubleMove()">Double</button>
+	<button onclick = "split()">Split</button>
+</div>
+
+
+</body>
+</html>

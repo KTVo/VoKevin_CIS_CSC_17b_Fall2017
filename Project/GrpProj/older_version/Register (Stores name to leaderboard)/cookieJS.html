@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie From PHP to JS</title>
+	<script type="text/javascript" src="cookieFunctions.js"></script>
+</head>
+<body>
+	<script>
+		document.write("<p>Reading back the cookie from php</p>");
+		var a = getCookie("object3");
+		var clean = decodeURIComponent(a);
+		var n = clean.replace(/\++/g,' ');
+		document.write(n);
+		var str = ""+n;
+		var charStr =  str.split('');
+		var str1 = "";
+				for(var i = 8; i < str.length; i++){
+					if(charStr[i] == '"')
+						break;
+					
+					if(charStr[i] !== "\""){
+						str1 += charStr[i];
+					}
+				}
+
+				var playerInfo = [{name: str1, balance:34545, date:"10/01/17"},
+					   {name:"Joey M.", balance:2000345, date:"10/01/17"},
+					   {name:"Mark Fabio", balance:300456, date:"10/02/17"},
+					   {name:"Luke March", balance:900, date:"10/09/17"},
+					   {name:"Johnny A.", balance:-55, date:"10/13/17"}];
+		
+					  
+					   
+		for (var i = playerInfo.length;  i >= 0 ; i--){
+			for (var  x = 0 ; x < playerInfo.length - 1; x++){
+				if(playerInfo[x].balance < playerInfo[x+1].balance){
+					var tempBalance = playerInfo[x+1].balance;
+					playerInfo[x+1].balance = playerInfo[x].balance;
+					playerInfo[x].balance = tempBalance;
+					
+					var tempName = playerInfo[x+1].name;
+					playerInfo[x+1].name = playerInfo[x].name;
+					playerInfo[x].name = tempName;
+					var tempDate = playerInfo[x+1].date;
+					playerInfo[x+1].date = playerInfo[x].date;
+					playerInfo[x].date = tempDate;
+			}
+		}
+	}
+	
+	document.write("<table>");
+	document.write("<tr><th><center>Username</center></th><th><center>Earning</center></th><th><center>Last Played</center></th></tr>");
+	for(var i = 0; i < playerInfo.length; i++){
+		document.write("<tr><td><center>"+playerInfo[i].name + "</center></td><td><center>$" + playerInfo[i].balance + "</center></td><td><center>" + playerInfo[i].date + "</center></td></tr></center>");
+	}
+	document.write("</table>");
+	
+	</script>
+
+</body>
+</html>

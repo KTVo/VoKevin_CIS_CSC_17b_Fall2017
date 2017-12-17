@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackjack in JS</title>
+</head>
+<body>
+	<script type="text/javascript" src="Card.js"></script>
+	<script type="text/javascript" src="Shoe.js"></script>
+	<script type="text/javascript" src="Hand.js"></script>
+	<script type="text/javascript" src="Player.js"></script>
+	<script type="text/javascript" src="Dealer.js"></script>
+	<script type="text/javascript" src="Game.js"></script>
+	<script>
+		var game = new Game();
+		var shoe = new Shoe();
+		var counter=0;
+		var current_bet=0;
+		var choice;
+
+		var name=prompt("What is your name?");
+		var player=new Player(shoe,name);
+		player.setBalance(100);
+		var dealer=new Dealer(shoe);
+
+		document.write("Player 1 Balance: "+player.getBalance()+"<br>");
+
+		current_bet = game.makeBet(player);
+		shoe.shuffleShoe();
+		game.newDeal(shoe,player,dealer,counter,current_bet);
+
+			choice=prompt("Enter 1 to Hit or 2 to Stand");
+		
+
+			switch(choice){
+				case 1:{
+					player.drawCard();
+					counter++;
+					game.gameInfo(player,dealer,current_bet);
+					if(game.findWinner(pl,deal,current_bet)==true){
+						current_bet=game.makeBet(player);
+						game.newDeal(shoe,player,dealer,counter,current_bet);
+					}
+				}break;
+
+				case 2:{
+					if(game.findWinner(player,dealer,current_bet)==true){
+						current_bet=game.makeBet(player);
+						game.newDeal(shoe,player,dealer,counter,current_bet);
+					}
+
+				}break;
+					}break;
+			
+		
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackjack - Main Page</title>
+</head>
+<body>
+	<h1>Blackjack</h1>
+	<script>
+		var askMember = prompt("Are you a member? (Enter \"yes\" or \"no\"):");
+		
+			if(askMember.toUpperCase === "YES") {
+				//Askes for login
+			}else if(askMember.toUpperCase() === "NO"){
+				//Askes for login to make an account	
+			}else{
+				do{
+					askMember = prompt("Your input is invalid. Please enter \"yes\" or \"no\" on you being a member:");
+				}while(askMember.toUpperCase() !== "YES" && askMember.toUpperCase() !== "NO");
+			}
+	</script>
+</body>
+</html>

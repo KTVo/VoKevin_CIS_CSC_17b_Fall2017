@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Leaderboard</title>
+	<style>
+		body{
+			background-image: url("bluebackground.jpg");
+			color : white;
+		}
+	
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+		tr:nth-child(even) {
+			background-color: black;
+		}
+		
+		tr:nth-child(odd) {
+			background-color: #34495E;
+		}
+		a.ex1:hover, a.ex1:active {color: #F8C471;}
+</style>
+<?php include 'cookieTransferObject.php';?>
+</head>
+<body>
+	
+
+	<h1><center><u>Leaderboard</u></center></h1>
+	<br />
+	<br />
+	<br />
+	<br />
+	
+	
+	
+
+	<script>
+	
+		var names = ['Trevor Shortlidge', 'Kevin Vo', 'K. Romeo', 'Yating', 'Mario', 'RCC_User'];
+		var balances = [34545, 2000345, 300456, 900, -55];
+	
+		//Include ascending for Name & Money
+		var playerInfo = [{name: names[0], balance: balances[0], date:"10/01/17"},
+						  {name: names[1], balance: balances[1], date:"10/01/17"},
+					      {name: names[2], balance: balances[2], date:"10/02/17"},
+					      {name: names[3], balance: balances[3], date:"10/09/17"},
+					      {name: names[4], balance: balances[4], date:"10/13/17"}];
+		
+		for (var i = playerInfo.length;  i >= 0 ; i--){
+			for (var  x = 0 ; x < playerInfo.length - 1; x++){
+				if(playerInfo[x].balance > playerInfo[x+1].balance){
+					var tempBalance = playerInfo[x+1].balance;
+					playerInfo[x+1].balance = playerInfo[x].balance;
+					playerInfo[x].balance = tempBalance;
+					
+					var tempName = playerInfo[x+1].name;
+					playerInfo[x+1].name = playerInfo[x].name;
+					playerInfo[x].name = tempName;
+					var tempDate = playerInfo[x+1].date;
+					playerInfo[x+1].date = playerInfo[x].date;
+					playerInfo[x].date = tempDate;
+			}
+		}
+	}
+	
+	document.write("<table>");
+	document.write('<tr><th><center><a class="ex1" href="leaderboard_username_ascend.html">Username</a></center></th><th><center><a class="ex1" href="leaderboard_earning_descend.html">Earning</a></center></th><th><center>Last Played</center></th></tr>');
+	for(var i = 0; i < playerInfo.length; i++){
+		document.write("<tr><td><center>"+playerInfo[i].name + "</center></td><td><center>$" + playerInfo[i].balance + "</center></td><td><center>" + playerInfo[i].date + "</center></td></tr></center>");
+	}
+	document.write('</table>');
+	</script>
+
+</body>
+</html>	
